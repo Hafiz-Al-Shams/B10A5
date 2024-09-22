@@ -31,6 +31,10 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'btn-bg': 'rgb(180, 244, 97)',
+                        'text-color-1': 'rgba(17, 17, 17, 0.7)',
+                        'bg-color-1': 'rgb(249, 247, 243)',
+                        'btn-border-color': 'rgba(17, 17, 17, 0.3)',
                     }
                 }
             }
@@ -39,7 +43,33 @@
 </head>
 
 <body>
-    <h1 class="text-5xl font-extrabold uppercase mt-12 text-center">project initialized</h1>
+    <header>
+        <!-- navbar starts -->
+        <div class="bg-bg-color-1 pt-8 pb-16">
+            <div class="w-10/12 mx-auto flex justify-between items-center">
+                <button id="btn-blog" class="btn text-xl font-bold px-8 bg-btn-bg">Blog</button>
+                <div class="flex justify-center items-center">
+                    <img src="./assets/logo.png" alt="">
+                    <h4 class="pl-3 text-2xl font-bold">Donate Bangladesh</h4>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="./assets/coin.png" alt="">
+                    <h4 class="pl-2 text-2xl font-bold text-text-color-1"><span>5500</span> BDT</h4>
+                </div>
+            </div>
+        </div>
+        <!-- navbar ends -->
+        <!-- features start -->
+        <div class="flex justify-center items-center pt-20">
+            <button
+                class="btn btn-lg text-2xl font-bold text-text-color-1 px-9 bg-transparent border border-btn-border-color">Donation</button>
+            <button
+                class="btn btn-lg ml-5 text-2xl font-bold text-text-color-1 px-9 bg-transparent border border-btn-border-color">History</button>
+        </div>
+        <!-- features end -->
+    </header>
+    <main></main>
+    <footer></footer>
 
 
 
