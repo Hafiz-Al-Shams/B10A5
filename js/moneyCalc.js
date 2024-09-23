@@ -19,7 +19,19 @@ document.getElementById('card1-btn').addEventListener('click', function () {
     document.getElementById('main-balance').innerText = newMainBalance;
     document.getElementById('card1-input').value = '';
     alert('congrats! u have donated successfully');
+
+    // addition to history
+    const now = new Date();
+    const stringDate = now.toString();
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'border-card-border-color', 'rounded-2xl', 'px-9', 'py-7', 'shadow-sm', 'space-y-3', 'bg-lime-50');
+    div.innerHTML = `
+    <h4 class="text-xl font-bold">${card1Donation} Taka is Donated for Flood at Noakhali, Bangladesh</h4>
+    <p class="text-text-color-1 bg-white p-3 rounded-lg">Date : ${stringDate}</p>
+    `
+    document.getElementById('history-container').appendChild(div);
 });
+
 
 // card-2
 document.getElementById('card2-btn').addEventListener('click', function () {
@@ -42,7 +54,19 @@ document.getElementById('card2-btn').addEventListener('click', function () {
     document.getElementById('main-balance').innerText = newMainBalance;
     document.getElementById('card2-input').value = '';
     alert('congrats! u have donated successfully');
+
+    // addition to history
+    const now = new Date();
+    const stringDate = now.toString();
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'border-card-border-color', 'rounded-2xl', 'px-9', 'py-7', 'shadow-sm', 'space-y-3', 'bg-lime-50');
+    div.innerHTML = `
+    <h4 class="text-xl font-bold">${card2Donation} Taka is Donated for Flood Relief in Feni, Bangladesh</h4>
+    <p class="text-text-color-1 bg-white p-3 rounded-lg">Date : ${stringDate}</p>
+    `
+    document.getElementById('history-container').appendChild(div);
 });
+
 
 // card-3
 document.getElementById('card3-btn').addEventListener('click', function () {
@@ -65,6 +89,17 @@ document.getElementById('card3-btn').addEventListener('click', function () {
     document.getElementById('main-balance').innerText = newMainBalance;
     document.getElementById('card3-input').value = '';
     alert('congrats! u have donated successfully');
+
+    // addition to history
+    const now = new Date();
+    const stringDate = now.toString();
+    const div = document.createElement('div');
+    div.classList.add('border-2', 'border-card-border-color', 'rounded-2xl', 'px-9', 'py-7', 'shadow-sm', 'space-y-3', 'bg-lime-50');
+    div.innerHTML = `
+    <h4 class="text-xl font-bold">${card3Donation} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h4>
+    <p class="text-text-color-1 bg-white p-3 rounded-lg">Date : ${stringDate}</p>
+    `
+    document.getElementById('history-container').appendChild(div);
 });
 
 

@@ -10,13 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
-
-    <!-- font awesome CDN -->
-    <!-- <script src="https://kit.fontawesome.com/bf49972686.js" crossorigin="anonymous"></script> -->
-
-
-
     <!-- daisyUI + Tailwind CSS CDN script: -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -67,16 +60,16 @@
         <!-- navbar ends -->
         <!-- features start -->
         <div class="flex justify-center items-center pt-9 pb-6 gap-8">
-            <button
-                class="btn btn-lg text-2xl font-bold text-text-color-1 px-9 bg-transparent border-2 border-btn-border-color">Donation</button>
-            <button
-                class="btn btn-lg text-2xl font-bold text-text-color-1 px-9 bg-transparent border-2 border-btn-border-color">History</button>
+            <button id="show-donation-btn"
+                class="btn btn-lg text-2xl font-bold px-9 border-btn-border-color border-0 bg-btn-bg">Donation</button>
+            <button id="show-history-btn"
+                class="btn btn-lg text-2xl font-bold px-9 border border-btn-border-color">History</button>
         </div>
         <!-- features end -->
     </header>
     <main class="w-10/12 mx-auto pt-9">
         <!-- Donation Cards -->
-        <div class="space-y-12">
+        <div id="cards-container" class="space-y-12">
             <!-- card-1 -->
             <div
                 class="flex justify-center items-center border-2 border-card-border-color rounded-2xl p-8 gap-6 shadow">
@@ -116,7 +109,7 @@
                         <img src="./assets/coin.png" alt="" class="w-2/12">
                         <p><span id="card2-balance">600</span> BDT</p>
                     </div>
-                    <h3 class="text-xl font-extrabold">Donate for Flood Relief in Feni,Bangladesh</h3>
+                    <h3 class="text-xl font-extrabold">Donate for Flood Relief in Feni, Bangladesh</h3>
                     <p class="text-text-color-1">The recent floods in Feni have devastated local communities, leading to
                         severe disruption and loss. Your generous donation will help provide immediate aid, including
                         food,
@@ -160,11 +153,14 @@
                 </div>
             </div>
         </div>
+        <!-- History Section -->
+        <div id="history-container" class="space-y-5 mb-16 hidden"></div>
     </main>
-    <footer class="bg-bg-color-1 pt-24 mt-16"></footer>
+    <footer id="footer" class="bg-bg-color-1 pt-24 mt-16"></footer>
     <script src="./js/utilities.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/moneyCalc.js"></script>
+    <script src="./js/features.js"></script>
 </body>
 
 </html>
