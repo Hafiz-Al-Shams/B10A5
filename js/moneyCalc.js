@@ -2,6 +2,7 @@
 document.getElementById('card1-btn').addEventListener('click', function () {
     const card1Donation = inputValue('card1-input');
     if (card1Donation <= 0 || isNaN(card1Donation)) {
+        document.getElementById('static-modal').classList.add('hidden');
         alert('Invalid Donation Amount!!');
         document.getElementById('card1-input').value = '';
         return;
@@ -11,6 +12,7 @@ document.getElementById('card1-btn').addEventListener('click', function () {
     const newCard1Balance = card1Balance + card1Donation;
     const newMainBalance = mainBalance - card1Donation;
     if (newMainBalance < 0) {
+        document.getElementById('static-modal').classList.add('hidden');
         alert('Insufficient Balance!!');
         document.getElementById('card1-input').value = '';
         return;
@@ -18,7 +20,7 @@ document.getElementById('card1-btn').addEventListener('click', function () {
     document.getElementById('card1-balance').innerText = newCard1Balance;
     document.getElementById('main-balance').innerText = newMainBalance;
     document.getElementById('card1-input').value = '';
-    alert('congrats! u have donated successfully');
+    document.getElementById('static-modal').classList.remove('hidden');
 
     // addition to history
     const now = new Date();
@@ -37,6 +39,7 @@ document.getElementById('card1-btn').addEventListener('click', function () {
 document.getElementById('card2-btn').addEventListener('click', function () {
     const card2Donation = inputValue('card2-input');
     if (card2Donation <= 0 || isNaN(card2Donation)) {
+        document.getElementById('static-modal').classList.add('hidden');
         alert('Invalid Donation Amount!!');
         document.getElementById('card2-input').value = '';
         return;
@@ -46,6 +49,7 @@ document.getElementById('card2-btn').addEventListener('click', function () {
     const newCard2Balance = card2Balance + card2Donation;
     const newMainBalance = mainBalance - card2Donation;
     if (newMainBalance < 0) {
+        document.getElementById('static-modal').classList.add('hidden');
         alert('Insufficient Balance!!');
         document.getElementById('card2-input').value = '';
         return;
@@ -53,7 +57,7 @@ document.getElementById('card2-btn').addEventListener('click', function () {
     document.getElementById('card2-balance').innerText = newCard2Balance;
     document.getElementById('main-balance').innerText = newMainBalance;
     document.getElementById('card2-input').value = '';
-    alert('congrats! u have donated successfully');
+    document.getElementById('static-modal').classList.remove('hidden');
 
     // addition to history
     const now = new Date();
@@ -72,6 +76,7 @@ document.getElementById('card2-btn').addEventListener('click', function () {
 document.getElementById('card3-btn').addEventListener('click', function () {
     const card3Donation = inputValue('card3-input');
     if (card3Donation <= 0 || isNaN(card3Donation)) {
+        document.getElementById('static-modal').classList.add('hidden');
         alert('Invalid Donation Amount!!');
         document.getElementById('card3-input').value = '';
         return;
@@ -81,6 +86,7 @@ document.getElementById('card3-btn').addEventListener('click', function () {
     const newCard3Balance = card3Balance + card3Donation;
     const newMainBalance = mainBalance - card3Donation;
     if (newMainBalance < 0) {
+        document.getElementById('static-modal').classList.add('hidden');
         alert('Insufficient Balance!!');
         document.getElementById('card3-input').value = '';
         return;
@@ -88,7 +94,7 @@ document.getElementById('card3-btn').addEventListener('click', function () {
     document.getElementById('card3-balance').innerText = newCard3Balance;
     document.getElementById('main-balance').innerText = newMainBalance;
     document.getElementById('card3-input').value = '';
-    alert('congrats! u have donated successfully');
+    document.getElementById('static-modal').classList.remove('hidden');
 
     // addition to history
     const now = new Date();
@@ -101,5 +107,3 @@ document.getElementById('card3-btn').addEventListener('click', function () {
     `
     document.getElementById('history-container').appendChild(div);
 });
-
-

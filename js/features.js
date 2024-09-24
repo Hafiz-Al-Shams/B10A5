@@ -4,6 +4,7 @@ document.getElementById('show-history-btn').addEventListener('click', function (
     document.getElementById('cards-container').classList.add('hidden');
     document.getElementById('footer').classList.add('hidden');
     document.getElementById('history-container').classList.remove('hidden');
+    document.getElementById('static-modal').classList.add('hidden');
 });
 
 
@@ -13,6 +14,5 @@ document.getElementById('show-donation-btn').addEventListener('click', function 
     document.getElementById('history-container').classList.add('hidden');
     document.getElementById('cards-container').classList.remove('hidden');
     document.getElementById('footer').classList.remove('hidden');
+    document.getElementById('static-modal').classList.add('hidden');
 });
-
-
