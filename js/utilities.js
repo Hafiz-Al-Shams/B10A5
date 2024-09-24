@@ -1,3 +1,4 @@
+// common functions
 function inputValue(id) {
     const inputNumber = parseFloat(document.getElementById(id).value);
     return inputNumber;
