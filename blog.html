@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/exam.png" type="image/x-icon">
-    <title>Blog</title>
+    <title>My studyBlog</title>
     <!-- Lexend google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +21,103 @@
             font-style: normal;
         }
     </style>
+    <!-- for customizing with tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'bg-color-1': 'rgb(249, 247, 243)',
+                        'btn-bg': 'rgb(180, 244, 97)',
+                        'text-color-1': 'rgba(17, 17, 17, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="font-lexend">
-    <h1 class="text-3xl font-extrabold text-center uppercase pt-12">this is my study blog</h1>
+    <header class="sticky top-0 backdrop-blur-lg bg-white/60 z-10">
+        <!-- navbar starts -->
+        <div class="bg-bg-color-1 pt-6 pb-7">
+            <div class="w-10/12 mx-auto flex justify-between items-center">
+                <button id="btn-home" class="btn text-lg font-bold px-5 bg-btn-bg">Home</button>
+                <div class="flex justify-center items-center">
+                    <img src="./assets/logo.png" alt="" class="w-2/12">
+                    <h4 class="pl-3 text-xl font-extrabold">Donate Bangladesh</h4>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="./assets/coin.png" alt="">
+                    <h4 class="pl-2 text-xl font-bold text-text-color-1"><span id="main-balance">11000</span> BDT</h4>
+                </div>
+            </div>
+        </div>
+        <!-- navbar ends -->
+    </header>
+    <main class="w-10/12 mx-auto pt-16 pb-20">
+        <h1 class="text-5xl font-bold mb-9">Important QNA</h1>
+        <!-- qna accordion -->
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>DOM is an Object model of HTML file. It's a programming interface for HTML document or file. When the
+                    browser loads, HTML file get converted into DOM tree. JavaScript can easily manipulate HTML elements
+                    using DOM.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>There are 5 methods to select or read an element from the DOM <br>1. getElementsByTagName() <br>it
+                    selects all the elements with the specific tag name(div, p, span, etc.) & returns an
+                    HTMLCollection(array-like object) <br>2. getElementById() <br>it selects an element by its unique id
+                    attribute. <br>3. getElementsByClassName() <br>it selects all elements with a specific class name &
+                    returns an HTMLCollection(array-like object) <br>4. querySelector() <br>it selects only the first
+                    element that matches a CSS selector(class, id, attribute, etc.) <br>5. querySelectorAll() <br>it
+                    selects all elements that match a CSS selector(class, id, attribute, etc.) & returns a NodeList.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the DOM, and
+                why
+                is it useful?</div>
+            <div class="collapse-content">
+                <p>Event delegation is a technique in JavaScript where we delegate event handling to a parent element
+                    rather than adding event listeners to individual child elements. Instead of attaching event
+                    listeners to multiple elements, we attach one event listener to a common ancestor (often a
+                    container), and take advantage of event bubbling to catch events that occur on its descendants.
+                    <br>Event Delegation is very useful because- <br>1. Improves performance: Attaching individual event
+                    listeners to many elements can consume resources, especially in large lists or dynamic content. With
+                    event delegation, a single listener on the parent can manage events for all child elements, reducing
+                    memory usage and improving efficiency. <br>2. Handles dynamic elements: Event delegation allows us
+                    to handle events on elements that are dynamically added to the DOM after the page has loaded. Since
+                    the parent element already has the event listener, it can respond to events on newly added child
+                    elements without the need to add new listeners. <br>3. Simplifies Code: Instead of managing many
+                    listeners, a single listener at a higher level can manage all events, reducing the complexity of our
+                    code.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and styles
+                using the DOM?</div>
+            <div class="collapse-content">
+                <p>To manipulate an element's attributes, we use setAttribute() to change or add an attribute and
+                    removeAttribute() to remove it. We can access and modify an element's style by using the style
+                    property, like: element.style.color = 'blue' to change its color. To retrieve an attribute's value,
+                    we use getAttribute(). For class manipulations, we can use classList methods like: add(), remove(),
+                    or toggle().</p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./js/blog.js"></script>
 </body>
 
 </html>
