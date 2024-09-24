@@ -68,18 +68,21 @@
         <!-- features end -->
     </header>
     <main class="w-10/12 mx-auto pt-9">
-        <!-- Static Modal starts -->
-        <div id="static-modal"
-            class="fixed top-[24%] md:left-[35%] z-20 lg:w-4/12 mx-auto rounded-2xl bg-lime-200 hidden">
-            <div class="flex flex-col justify-center items-center py-8 px-3 space-y-2">
+        <!-- daisyUI modal starts -->
+        <dialog id="my_custom_modal" class="modal">
+            <div class="modal-box w-10/12 flex flex-col justify-center items-center py-9 px-3 space-y-2">
                 <h1 class="text-2xl font-bold">Congratulations!!</h1>
                 <img src="./assets/coin.png" alt="" class="w-6">
-                <p class="font-semibold">You Have Donated for Humankind</p>
+                <p class="font-medium text-center">You Have Donated for Humankind</p>
                 <h3 class="text-lg font-bold">Successfully</h3>
-                <button id="close-confirm-btn" class="btn btn-primary px-5">close confirmation</button>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn font-semibold">close confirmation</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <!-- Static Modal ends -->
+        </dialog>
+        <!-- daisyUI modal ends -->
         <!-- Donation Cards -->
         <div id="cards-container" class="space-y-12">
             <!-- card-1 -->
